@@ -5,10 +5,14 @@ const Form = (props) => {
   const [values, setValues] = useState("");
 
   useEffect(() => {
+    const date = new Date();
     const p = {
       item: props.data.item,
       Qty: props.data.Qty,
       id: props.data.id,
+      bought: props.data.bought,
+      date: props.data.date,
+      time: props.data.time,
     };
     setValues(p);
   }, [props]);
@@ -25,9 +29,12 @@ const Form = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const date = new Date();
     const x = {
       ...values,
       bought: false,
+      date: date.toLocaleDateString(),
+      time: date.toLocaleTimeString(),
     };
 
     if (x.id === "") {
@@ -38,6 +45,8 @@ const Form = (props) => {
             item: "",
             Qty: "",
             id: "",
+            date: "",
+            time: "",
             bought: false,
           });
         })
@@ -53,6 +62,8 @@ const Form = (props) => {
             item: "",
             Qty: "",
             id: "",
+            date: "",
+            time: "",
             bought: false,
           });
         });

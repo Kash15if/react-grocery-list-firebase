@@ -11,6 +11,9 @@ function App() {
     Qty: "",
     id: "",
     item: "",
+    date: "",
+    time: "",
+    bought: false,
   });
 
   const onChangeOrEdit = (val) => {

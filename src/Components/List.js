@@ -81,8 +81,8 @@ const List = (props) => {
               <tr>
                 <td>{eachItem.item}</td>
                 <td>{eachItem.Qty}</td>
-                <td>{eachItem.id}</td>
-                <td>Otto</td>
+                <td>{eachItem.date}</td>
+                <td>{eachItem.time}</td>
                 <td>
                   <i
                     className="bi bi-pencil-square mx-2 text-primary"
