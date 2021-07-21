@@ -5,7 +5,6 @@ const Form = (props) => {
   const [values, setValues] = useState("");
 
   useEffect(() => {
-    const date = new Date();
     const p = {
       item: props.data.item,
       Qty: props.data.Qty,
